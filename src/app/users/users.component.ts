@@ -17,7 +17,6 @@ export class UsersComponent implements OnInit {
 
   ngOnInit() {
     this.getAllUsers();
-    this.getUserAA();
   }
 
   public getAllUsers(): void {
@@ -26,11 +25,6 @@ export class UsersComponent implements OnInit {
         resp => this.users = resp,
         err => console.log('Users cant be fetched')
       );
-  }
-  public getUserAA(): void {
-    this.userService.getUserA()
-      .subscribe(resp => this.user = resp,
-        err => console.log('No user'));
   }
 
   onSelect(u: User): void {

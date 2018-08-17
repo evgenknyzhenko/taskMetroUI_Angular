@@ -16,13 +16,7 @@ export class UserService {
     );
   }
 
-  public getUserA(): Observable<User> {
-    return this.http.get<User>(
-      'http://localhost:8080/userA', {observe: 'body'}
-    );
-  }
-
   addUser(user: User): Observable<User> {
-    return this.http.post('http://localhost:8080/user', user);
+    return this.http.post('http://localhost:8080/addUser', user);
   }
 }
