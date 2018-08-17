@@ -1,0 +1,14 @@
+
+
+<h2>List of users:</h2>
+<div *ngFor="let u of users" (click)="onSelect(u)">
+  <h4>{{u.name}}</h4>
+ <!-- <h3>Age: {{u.age}}</h3>
+  <h3>MobileNo: {{u.mobileNo}}</h3>-->
+</div>
+
+<!--<div>
+  Name: {{user.name}}
+</div>-->
+
+<app-user-details [user]="selectedUser"></app-user-details>
