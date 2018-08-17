@@ -7,12 +7,14 @@ import {UserService} from './services/user-service';
 import {HttpClientModule} from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
 import { UserDetailsComponent } from './user-details/user-details.component';
+import { AddUserComponent } from './add-user/add-user.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UsersComponent,
-    UserDetailsComponent
+    UserDetailsComponent,
+    AddUserComponent
   ],
   imports: [
     HttpClientModule,
