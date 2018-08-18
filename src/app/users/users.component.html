@@ -1,10 +1,16 @@
 <h3>Add user:</h3>
 <app-add-user></app-add-user>
 
-<h3>List of users (select user for detail):</h3>
+<h3>List of users (select user for details):</h3>
 
-<div *ngFor="let u of users" (click)="onSelect(u)">
-  <h4>{{u.name}}</h4>
-</div>
+<ul class="users">
+  <li *ngFor="let u of users"
+    [class.selected]="u === selectedUser"
+    (click)="onSelect(u)">
+    <span class="badge">{{u.name}}</span>
+
+  </li>
+</ul>
+
 
 <app-user-details [user]="selectedUser"></app-user-details>
